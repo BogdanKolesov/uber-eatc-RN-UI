@@ -4,7 +4,7 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 
-
+// Add: com
 const Searchbar = () => {
     return (
         <View style={{ marginTop: 15, flexDirection: 'row' }}>
