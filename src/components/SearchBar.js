@@ -9,6 +9,10 @@ const Searchbar = () => {
     return (
         <View style={{ marginTop: 15, flexDirection: 'row' }}>
             <GooglePlacesAutocomplete
+                query={{
+                    key: 'AIzaSyB0zfwuXS4ql_Y2fQbuH6YCumbDFP_9r7w',
+                    language: 'en'
+                }}
                 placeholder='Search'
                 styles={{
                     textInput: {

@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import Categories from '../../components/Categories';
 import HeaderTabs from '../../components/HeaderTabs'
-import Restaurantitems, { localRestaurants } from '../../components/RestaurantItems';
+import Restaurantitems from '../../components/RestaurantItems';
 import SearchBar from '../../components/SearchBar'
 
 const YELP_API_KEY = "R-oK_SU5_3x5L_gsDVXNyxUwUJCHsseOdA5AYAdr_pet5rjDnNJ0Yd-CjIrH855CjRq__qt6sBhg0QrbGNTPH7jrBeN40lDcIk42xWXMkK423-uLjyhI8QWNDUt1YXYx"
 
 const Home = () => {
-    const [restaurantData, setRestaurantData] = useState(localRestaurants);
+    const [restaurantData, setRestaurantData] = useState([]);
 
     const city = 'Saint-Petersburg'
 
