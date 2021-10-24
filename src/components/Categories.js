@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView, View, StyleSheet, Image, Text } from 'react-native';
-import { categoriesContent } from '../content/categoriesContent';
+import { categoriesData } from '../data/categoriesData';
 
 
 const Categories = () => {
@@ -12,7 +12,7 @@ const Categories = () => {
             paddingLeft: 15
         }}>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                {categoriesContent.map((item, index) => (
+                {categoriesData.map((item, index) => (
                     <View key={index} style={{ alignItems: 'center', marginRight: 30 }}>
                         <Image source={item.image} style={{
                             width: 50,

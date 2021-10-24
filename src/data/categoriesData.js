@@ -1,6 +1,6 @@
 import { IMAGES } from '../constants/IMAGES'
 
-export const categoriesContent = [
+export const categoriesData = [
     {
         image: IMAGES.shoppingBag,
         text: 'Pick-up'
