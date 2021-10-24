@@ -10,23 +10,23 @@ const YELP_API_KEY = "R-oK_SU5_3x5L_gsDVXNyxUwUJCHsseOdA5AYAdr_pet5rjDnNJ0Yd-CjI
 const Home = () => {
     const [restaurantData, setRestaurantData] = useState(localRestaurants);
 
-    const city = 'Hollywood'
+    const city = 'Saint-Petersburg'
 
-    const clientID = 'KlFzF5h48TIl1UKc2Y7MjQ'
+    // const clientID = 'KlFzF5h48TIl1UKc2Y7MjQ'
 
     const getRestaurantsFromYelp = () => {
         const yelpUrl = `https://api.yelp.com/v3/businesses/search?term=restaurants&location=${city}`;
 
 
         const apiOptions = {
-            header: {
+            headers: {
                 Authorization: `Bearer ${YELP_API_KEY}`
             }
         };
 
         return fetch(yelpUrl, apiOptions)
             .then((res) => res.json())
-            .then((json) => setRestaurantData(json.buisnesses))
+            .then((json) => setRestaurantData(json.businesses))
     }
 
     useEffect(() => {
