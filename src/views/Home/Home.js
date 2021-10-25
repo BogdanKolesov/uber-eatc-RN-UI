@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, ScrollView } from 'react-native';
+import { View, StyleSheet, ScrollView, SafeAreaView } from 'react-native';
+import { Divider } from 'react-native-elements/dist/divider/Divider';
+import BottomTabs from '../../components/BottomTabs';
 import Categories from '../../components/Categories';
 import HeaderTabs from '../../components/HeaderTabs'
 import Restaurantitems from '../../components/RestaurantItems';
@@ -43,7 +45,8 @@ const Home = () => {
                 <Categories />
                 <Restaurantitems restaurantData={restaurantData} />
             </ScrollView>
-
+            <Divider width={1} />
+            <BottomTabs />
         </View>
     );
 }
