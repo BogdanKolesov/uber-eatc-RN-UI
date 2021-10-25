@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
-const Headertabs = () => {
-    const [activeTab, setActiveTab] = useState('Delivery')
+const HeaderTabs = ({ activeTab, setActiveTab }) => {
     return (
         <View style={{ flexDirection: 'row', alignSelf: 'center', marginTop: '10%' }}>
             <HeaderButton
@@ -36,4 +35,4 @@ const HeaderButton = (props) => {
 
 const styles = StyleSheet.create({})
 
-export default Headertabs;
+export default HeaderTabs;
