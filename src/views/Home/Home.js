@@ -10,7 +10,7 @@ const YELP_API_KEY = "R-oK_SU5_3x5L_gsDVXNyxUwUJCHsseOdA5AYAdr_pet5rjDnNJ0Yd-CjI
 const Home = () => {
     const [restaurantData, setRestaurantData] = useState([]);
 
-    const city = 'Saint-Petersburg'
+    const [city, setCity] = useState('Saint-Petersburg')
 
     // const clientID = 'KlFzF5h48TIl1UKc2Y7MjQ'
 
@@ -31,13 +31,13 @@ const Home = () => {
 
     useEffect(() => {
         getRestaurantsFromYelp()
-    }, []);
+    }, [city]);
 
     return (
         <View style={{ backgroundColor: '#eee', flex: 1 }}>
             <View style={{ backgroundColor: 'white', padding: 15 }}>
                 <HeaderTabs />
-                <SearchBar />
+                <SearchBar cityHandler={setCity} />
             </View>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <Categories />
