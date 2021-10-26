@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView, View, StyleSheet, Image, Text } from 'react-native';
-import { categoriesData } from '../data/categoriesData';
+import { categoriesData } from '../../data/categoriesData';
 
 
 const Categories = () => {
