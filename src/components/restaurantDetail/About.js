@@ -1,18 +1,29 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
 
-const image = 'https://cdn.pixabay.com/photo/2020/03/26/20/54/table-4971787_1280.jpg'
 
-const title = 'Famous Kitchn Germany'
+const yelpRestaurantInfo = {
+    name: 'Famous Kitchen Germany',
+    image: 'https://cdn.pixabay.com/photo/2020/03/26/20/54/table-4971787_1280.jpg',
+    price: '$2',
+    reviews: '1500',
+    rating: 5,
+    categories: [{ title: ' Germany' }, { title: 'Comfort Food' }]
+}
 
-const desctiption = 'Germany and Taste food'
+
+const { name, image, price, reviews, rating, categories } = yelpRestaurantInfo
+
+const formattedCategories = categories.map((cat) => cat.title).join(' • ')
+
+const description = `${formattedCategories} ${price ? ' • ' : ' '} ${rating} ⭐ (${reviews})`
 
 const About = () => {
     return (
         <View>
             <RestaurantImage image={image} />
-            <RestaurantTitle title={title} />
-            <RestaurantDescription desctiption={desctiption} />
+            <RestaurantName title={name} />
+            <RestaurantDescription description={description} />
         </View>
     );
 }
@@ -21,7 +32,7 @@ const RestaurantImage = (props) => (
     <Image source={{ uri: props.image }} style={{ width: '100%', height: 180 }} />
 )
 
-const RestaurantTitle = (props) => (
+const RestaurantName = (props) => (
     <Text style={{
         fontSize: 29,
         fontWeight: '600',
@@ -36,7 +47,7 @@ const RestaurantDescription = (props) => (
         marginHorizontal: 15,
         fontWeight: '400',
         fontSize: 15.5
-    }}>{props.desctiption}</Text>
+    }}>{props.description}</Text>
 )
 
 const styles = StyleSheet.create({})
