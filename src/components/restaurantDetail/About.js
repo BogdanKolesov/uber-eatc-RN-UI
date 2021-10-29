@@ -2,23 +2,16 @@ import React from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
 
 
-const yelpRestaurantInfo = {
-    name: 'Famous Kitchen Germany',
-    image: 'https://cdn.pixabay.com/photo/2020/03/26/20/54/table-4971787_1280.jpg',
-    price: '$2',
-    reviews: '1500',
-    rating: 5,
-    categories: [{ title: ' Germany' }, { title: 'Comfort Food' }]
-}
+
+const About = (props) => {
+
+    const { name, image, price, reviews, rating, categories } = props.route.params
+
+    const formattedCategories = categories.map((cat) => cat.title).join(' • ')
+
+    const description = `${formattedCategories} ${price ? ' • ' : ' '} ${rating} ⭐ (${reviews})`
 
 
-const { name, image, price, reviews, rating, categories } = yelpRestaurantInfo
-
-const formattedCategories = categories.map((cat) => cat.title).join(' • ')
-
-const description = `${formattedCategories} ${price ? ' • ' : ' '} ${rating} ⭐ (${reviews})`
-
-const About = () => {
     return (
         <View>
             <RestaurantImage image={image} />
