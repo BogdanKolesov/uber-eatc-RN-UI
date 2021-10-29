@@ -3,7 +3,7 @@ import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 const HeaderTabs = ({ activeTab, setActiveTab }) => {
     return (
-        <View style={{ flexDirection: 'row', alignSelf: 'center', marginTop: '10%' }}>
+        <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
             <HeaderButton
                 text='Delivery'
                 activeTab={activeTab}
