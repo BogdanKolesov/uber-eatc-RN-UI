@@ -15,7 +15,7 @@ const About = (props) => {
     return (
         <View>
             <RestaurantImage image={image} />
-            <RestaurantName title={name} />
+            <RestaurantName name={name} />
             <RestaurantDescription description={description} />
         </View>
     );
@@ -31,7 +31,7 @@ const RestaurantName = (props) => (
         fontWeight: '600',
         marginTop: 10,
         marginHorizontal: 15
-    }}>{props.title}</Text>
+    }}>{props.name}</Text>
 )
 
 const RestaurantDescription = (props) => (

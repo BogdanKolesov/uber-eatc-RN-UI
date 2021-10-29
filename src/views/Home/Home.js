@@ -46,6 +46,7 @@ const Home = ({ navigation }) => {
                 <Restaurantitems restaurantData={restaurantData} navigation={navigation} />
             </ScrollView>
             <Divider width={1} />
+
             <BottomTabs />
         </View>
     );

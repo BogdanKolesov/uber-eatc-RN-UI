@@ -17,6 +17,12 @@ const localMenu = [
         image: 'https://pbs.twimg.com/media/DurKbd2WsAAaTjv.jpg'
     },
     {
+        title: 'Burgere',
+        description: 'Just burger for you',
+        price: '$3',
+        image: 'https://f.vividscreen.info/soft/b26d767db99f758c557ce17068bf0e9f/Fast-Food-Burgers-1024x768.jpg'
+    },
+    {
         title: 'Brokkole',
         description: 'For gourmans',
         price: '$2',
@@ -33,35 +39,32 @@ const localMenu = [
         description: 'Russian and Ukrain soup',
         price: '$3',
         image: 'https://elsol-compress.s3-accelerate.amazonaws.com/imagenes/001/006/495/001006495.jpg'
-    },
-    {
-        title: 'Burgere',
-        description: 'Just burger for you',
-        price: '$3',
-        image: 'https://f.vividscreen.info/soft/b26d767db99f758c557ce17068bf0e9f/Fast-Food-Burgers-1024x768.jpg'
     }
+
 ]
 
 
 const MenuItems = () => {
     return (
-        <ScrollView showsVerticalScrollIndicator={false}>
-            {localMenu.map((food, index) => (
-                <View key={index}>
-                    <View style={styles.menuItemStyle}>
-                        <BouncyCheckbox
-                            iconStyle={{
-                                borderColor: 'lightgray',
-                                borderRadius: 5
-                            }}
-                            fillColor='green' />
-                        <FoodInfo food={food} />
-                        <FoodImage food={food} />
+        <>
+            <ScrollView style={{ height: '60%' }} showsVerticalScrollIndicator={false}>
+                {localMenu.map((food, index) => (
+                    <View key={index}>
+                        <View style={styles.menuItemStyle}>
+                            <BouncyCheckbox
+                                iconStyle={{
+                                    borderColor: 'lightgray',
+                                    borderRadius: 5
+                                }}
+                                fillColor='green' />
+                            <FoodInfo food={food} />
+                            <FoodImage food={food} />
+                        </View>
+                        <Divider width={0.5} style={{ marginHorizontal: 20 }} />
                     </View>
-                    <Divider width={0.5} style={{ marginHorizontal: 20 }} />
-                </View>
-            ))}
-        </ScrollView>
+                ))}
+            </ScrollView>
+        </>
     );
 }
 
