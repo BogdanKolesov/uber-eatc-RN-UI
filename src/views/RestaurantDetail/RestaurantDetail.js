@@ -10,7 +10,7 @@ const RestaurantDetail = ({ route, navigation }) => {
         <View style={{ marginTop: '7.5%' }}>
             <About route={route} />
             <Divider width={1.8} style={{ marginVertical: 20 }} />
-            <MenuItems />
+            <MenuItems restaurantName={route.params.name} />
             <ViewCart
                 active
                 navigation={navigation}

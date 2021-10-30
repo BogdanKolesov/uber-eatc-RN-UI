@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
-const ViewCart = ({ active }) => {
+const ViewCart = ({ restaurantName, active }) => {
     return (
         <View style={{
             flex: 1,
@@ -30,7 +30,7 @@ const ViewCart = ({ active }) => {
                     position: 'relative',
                 }}>
                     <Text style={{ color: 'white', fontSize: 20 }}>
-                        View Cart
+                        {restaurantName}
                     </Text>
                 </TouchableOpacity>
             </View>
