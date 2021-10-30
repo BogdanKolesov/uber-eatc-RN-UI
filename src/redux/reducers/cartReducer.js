@@ -26,7 +26,6 @@ let cartReducer = (state = defaultState, action) => {
             console.log(newState, '=>')
             return newState
         }
-
         default: return state
     }
 }
