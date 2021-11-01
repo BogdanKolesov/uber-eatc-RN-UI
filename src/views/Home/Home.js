@@ -7,6 +7,8 @@ import HeaderTabs from '../../components/home/HeaderTabs'
 import Restaurantitems from '../../components/home/RestaurantItems';
 import SearchBar from '../../components/home/SearchBar'
 
+//TODO: REPLACE SCREENS
+
 const YELP_API_KEY = "R-oK_SU5_3x5L_gsDVXNyxUwUJCHsseOdA5AYAdr_pet5rjDnNJ0Yd-CjIrH855CjRq__qt6sBhg0QrbGNTPH7jrBeN40lDcIk42xWXMkK423-uLjyhI8QWNDUt1YXYx"
 
 const Home = ({ navigation }) => {
