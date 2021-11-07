@@ -5,49 +5,12 @@ import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux';
 
-const localMenu = [
-    {
-        title: 'Borsh',
-        description: 'Russian and Ukrain soup',
-        price: '$3',
-        image: 'https://elsol-compress.s3-accelerate.amazonaws.com/imagenes/001/006/495/001006495.jpg'
-    },
-    {
-        title: 'Free',
-        description: 'Classic potata',
-        price: '$1.24',
-        image: 'https://pbs.twimg.com/media/DurKbd2WsAAaTjv.jpg'
-    },
-    {
-        title: 'Burgere',
-        description: 'Just burger for you',
-        price: '$3',
-        image: 'https://f.vividscreen.info/soft/b26d767db99f758c557ce17068bf0e9f/Fast-Food-Burgers-1024x768.jpg'
-    },
-    {
-        title: 'Brokkole',
-        description: 'For gourmans',
-        price: '$2',
-        image: 'https://golos.ua/images/items/2019-05/07/HFmVPS9fFzoG2exP/img_top.jpg'
-    },
-    {
-        title: 'Burger',
-        description: 'Just burger for you',
-        price: '$3',
-        image: 'https://f.vividscreen.info/soft/b26d767db99f758c557ce17068bf0e9f/Fast-Food-Burgers-1024x768.jpg'
-    },
-    {
-        title: 'Borshe',
-        description: 'Russian and Ukrain soup',
-        price: '$3',
-        image: 'https://elsol-compress.s3-accelerate.amazonaws.com/imagenes/001/006/495/001006495.jpg'
-    }
-
-]
-
-
-
-const MenuItems = ({ restaurantName }) => {
+const MenuItems = ({
+    restaurantName,
+    foods,
+    hideCheckbox,
+    marginLeft
+}) => {
 
     const dispatch = useDispatch()
 
@@ -70,20 +33,21 @@ const MenuItems = ({ restaurantName }) => {
     return (
         <>
             <ScrollView style={{ height: '60%', paddingBottom: 40 }} showsVerticalScrollIndicator={false}>
-                {localMenu.map((food, index) => (
+                {foods.map((food, index) => (
                     <View key={index}>
                         <View style={styles.menuItemStyle}>
-                            <BouncyCheckbox
-                                iconStyle={{
-                                    borderColor: 'lightgray',
-                                    borderRadius: 5
-                                }}
-                                fillColor='green'
-                                isChecked={isFoodInCart(food, cartItems)}
-                                onPress={(checkboxValue) => selectItem(food, checkboxValue)}
-                            />
+                            {hideCheckbox ? (<></>) : (
+                                <BouncyCheckbox
+                                    iconStyle={{
+                                        borderColor: 'lightgray',
+                                        borderRadius: 5
+                                    }}
+                                    fillColor='green'
+                                    isChecked={isFoodInCart(food, cartItems)}
+                                    onPress={(checkboxValue) => selectItem(food, checkboxValue)}
+                                />)}
                             <FoodInfo food={food} />
-                            <FoodImage food={food} />
+                            <FoodImage food={food} marginLeft={marginLeft ? marginLeft : 0} />
                         </View>
                         <Divider width={0.5} style={{ marginHorizontal: 20 }} />
                     </View>
@@ -101,9 +65,14 @@ const FoodInfo = (props) => (
     </View>
 )
 
-const FoodImage = (props) => (
+const FoodImage = ({ marginLeft, ...props }) => (
     <View>
-        <Image source={{ uri: props.food.image }} style={{ width: 100, height: 100, borderRadius: 8 }} />
+        <Image source={{ uri: props.food.image }} style={{
+            width: 100,
+            height: 100,
+            borderRadius: 8,
+            marginLeft: marginLeft
+        }} />
     </View>
 )
 
