@@ -13,8 +13,7 @@ const RestaurantDetail = ({ route, navigation }) => {
             <MenuItems restaurantName={route.params.name} />
             <ViewCart
                 active
-                navigation={navigation}
-                restaurantName={route.params.name} />
+                navigation={navigation} />
         </View>
     );
 }
