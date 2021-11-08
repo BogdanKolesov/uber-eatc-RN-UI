@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Text, Image } from 'react-native';
+import { View, Text, Image } from 'react-native';
 
 
 
@@ -43,6 +43,5 @@ const RestaurantDescription = (props) => (
     }}>{props.description}</Text>
 )
 
-const styles = StyleSheet.create({})
 
 export default About;

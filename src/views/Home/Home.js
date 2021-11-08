@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, ScrollView, SafeAreaView } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import { Divider } from 'react-native-elements/dist/divider/Divider';
 import BottomTabs from '../../components/home/BottomTabs';
 import Categories from '../../components/home/Categories';
@@ -54,8 +54,5 @@ const Home = ({ navigation }) => {
     );
 }
 
-const styles = StyleSheet.create({
-
-})
 
 export default Home;

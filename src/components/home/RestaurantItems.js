@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Image, Text, TouchableOpacity } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 
 const Restaurantitems = ({ restaurantData, navigation }) => {
@@ -70,6 +70,5 @@ const RestaurantInfo = (props) => (
     </View>
 )
 
-const styles = StyleSheet.create({})
 
 export default Restaurantitems;

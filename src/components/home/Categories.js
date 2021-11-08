@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, View, StyleSheet, Image, Text } from 'react-native';
+import { ScrollView, View, Image, Text } from 'react-native';
 import { categoriesData } from '../../data/categoriesData';
 
 
@@ -30,7 +30,5 @@ const Categories = () => {
         </View>
     );
 }
-
-const styles = StyleSheet.create({})
 
 export default Categories;

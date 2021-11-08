@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, Text } from 'react-native';
 
 const OrderItem = ({ item }) => {
 
@@ -23,7 +23,5 @@ const OrderItem = ({ item }) => {
         </View>
     );
 }
-
-const styles = StyleSheet.create({})
 
 export default OrderItem;

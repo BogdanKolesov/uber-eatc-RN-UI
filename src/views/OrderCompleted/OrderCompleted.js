@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { StyleSheet, Text, SafeAreaView, View, ScrollView } from 'react-native';
+import { Text, SafeAreaView, View, ScrollView } from 'react-native';
 import LottieView from 'lottie-react-native'
 import MenuItems from '../../components/restaurantDetail/MenuItems';
 import firebase from '../../../firebase'
@@ -75,7 +75,5 @@ const OrderCompleted = () => {
         </SafeAreaView>
     );
 }
-
-const styles = StyleSheet.create({})
 
 export default OrderCompleted;
