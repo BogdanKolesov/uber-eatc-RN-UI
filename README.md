@@ -1,1 +1,1 @@
-# Uber Eats - React Native UI clone.
+# Uber Eats - React Native UI clone
